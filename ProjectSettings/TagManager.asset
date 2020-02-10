@@ -41,6 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ENV_Background
+    uniqueID: 3427478009
+    locked: 0
+  - name: ENV_Foreground
+    uniqueID: 2740691217
+    locked: 0
+  - name: Hazards
+    uniqueID: 3338072011
+    locked: 0
+  - name: Collectables
+    uniqueID: 583326187
+    locked: 0
+  - name: Player
+    uniqueID: 282233929
+    locked: 0
   - name: Player
     uniqueID: 2852469491
     locked: 0
