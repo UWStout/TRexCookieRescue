@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    /*temp comment
+     
     private  float speed = 1.0f;
 
     // Start is called before the first frame update
@@ -16,16 +18,24 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //move down the lane it is in, meaning just a horizontal movement
-        transform.position += -transform.right * speed * Time.deltaTime;
+        //calling the movement for the non player objects
+        nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+    }
+
+    //Non-Player Movements
+    void nonPlayerMovement()
+    {
+            //move down the lane it is in, meaning just a horizontal movement
+            transform.translate(direction * speed * Time.deltaTime);
     }
 
     //spawn locations
     void Spawns()
     {
         //randomly choose 0,1 or 2
-         Random rando = new Random();
-         int ranNum = rando.Next(0,2);
+        int rando = Random.Range(0, 2);
+         //Random rando = new Random();
+         // int ranNum = rando.Next(0,2);
 
         //spawn based on the random number given
         switch (ranNum)
@@ -56,4 +66,5 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
+    */
 }
