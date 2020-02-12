@@ -14,19 +14,31 @@ public class Cookie_Movement : MonoBehaviour
 
     private Vector2 cookiePos;
     public float yPosChange = (1/2);
+    /*public int laneTracker = 1;*/
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            cookiePos = new Vector2(transform.position.x, transform.position.y + yPosChange);
-            transform.position = cookiePos;
+           /* if(laneTracker == 1 || laneTracker == 0)
+            {*/
+                cookiePos = new Vector2(transform.position.x, transform.position.y + yPosChange);
+                transform.position = cookiePos;
+            /*laneTracker++;
+        } */
+
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            cookiePos = new Vector2(transform.position.x, transform.position.y - yPosChange);
-            transform.position = cookiePos;
+            /*if (laneTracker == 1 || laneTracker == 2)
+            {*/
+                cookiePos = new Vector2(transform.position.x, transform.position.y - yPosChange);
+                transform.position = cookiePos;
+                /*laneTracker--;
+
+            }*/
+            
 
         }
 
