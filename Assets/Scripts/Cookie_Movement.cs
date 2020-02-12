@@ -13,7 +13,7 @@ public class Cookie_Movement : MonoBehaviour
     // Update is called once per frame
 
     private Vector2 cookiePos;
-    public float yPosChange = 2;
+    public float yPosChange = (1/2);
 
     void Update()
     {
