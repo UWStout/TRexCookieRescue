@@ -7,6 +7,12 @@ public class ScoreScript : MonoBehaviour
 {
 
     public static int score;
+    /*
+<<<<<<< HEAD
+=======
+   // int getScore = global.score;
+>>>>>>> 48a913eb50934fe7a241003a85adbbe5154d408e
+*/
     private Text scoreText;
 
     // Start is called before the first frame update
