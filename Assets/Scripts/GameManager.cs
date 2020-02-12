@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
         scoreText = GetComponent<Text>();//initialize the score to the text variable
     }
 
