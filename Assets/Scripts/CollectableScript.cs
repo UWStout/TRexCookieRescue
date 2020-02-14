@@ -20,7 +20,7 @@ public class CollectableScript : MonoBehaviour
         //calling the movement for the non player objects
         //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         collectablePosition = new Vector2(transform.position.x - speed, transform.position.y);
-        transfrom.position = collectablePosition;
+        transform.position = collectablePosition;
     }
 
     /*
