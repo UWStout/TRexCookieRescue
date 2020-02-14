@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class CollectableScript : MonoBehaviour
 {
-    /*temp comment
-     
-    private  float speed = 1.0f;
+    private Vector2 collectablePosition;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +18,19 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         //calling the movement for the non player objects
-        nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        collectablePosition = new Vector2(transform.position.x - speed, transform.position.y);
+        transfrom.position = collectablePosition;
     }
 
+    /*
     //Non-Player Movements
-    void nonPlayerMovement()
+    void nonPlayerMovement(Vector2 Direction)
     {
-            //move down the lane it is in, meaning just a horizontal movement
-            transform.translate(direction * speed * Time.deltaTime);
+        //move down the lane it is in, meaning just a horizontal movement
+        //transform.Translate(Direction * speed * Time.deltaTime);
     }
+    */
 
     //spawn locations
     void Spawns()
@@ -38,14 +41,17 @@ public class NewBehaviourScript : MonoBehaviour
          // int ranNum = rando.Next(0,2);
 
         //spawn based on the random number given
-        switch (ranNum)
+        switch (rando)
         {
             case 0:
-                new Vector2(4.75.x, -3.25.y);
+                new Vector2(4.75f, -3.25f);
+                break;
             case 1:
-                new Vector2(4.5.x, -3.7.y);
+                new Vector2(4.5f, -3.7f);
+                break;
             case 2:
-                new Vector2(4.25.x, -4.1.y);
+                new Vector2(4.25f, -4.1f);
+                break;
         }
     }
 
@@ -66,5 +72,4 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
-    */
 }
