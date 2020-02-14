@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8d6f171232f354ab4792e8d8ebf9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0.01
 --- !u!212 &1565383928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ Transform:
   m_GameObject: {fileID: 1565383926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.838, y: -3.292, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af86e644a6f5082488f5ae16a7e8e64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectable: {fileID: 0}
 --- !u!114 &1778735636
 MonoBehaviour:
   m_ObjectHideFlags: 0

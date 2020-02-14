@@ -11,7 +11,7 @@ public class CollectableScript : MonoBehaviour
     void Start()
     {
         //spawn in one of the 3 lanes
-        Spawns();
+        //Spawns();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class CollectableScript : MonoBehaviour
         //calling the movement for the non player objects
         //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         collectablePosition = new Vector2(transform.position.x - speed, transform.position.y);
-        transfrom.position = collectablePosition;
+        transform.position = collectablePosition;
     }
 
     /*
@@ -33,7 +33,7 @@ public class CollectableScript : MonoBehaviour
     */
 
     //spawn locations
-    void Spawns()
+   public void Spawns()
     {
         //randomly choose 0,1 or 2
         int rando = Random.Range(0, 2);
