@@ -10,13 +10,12 @@ public class GameManager : MonoBehaviour
     public static int score = 0;
     private Text scoreText;
 
-
    // CollectableScript collectable = other.GetComponent<CollectableScript>();
 
     // Start is called before the first frame update
     void Start()
     {
-        CollectableScript collectable = other.GetComponent<CollectableScript>();
+       // CollectableScript collectable = other.GetComponent<CollectableScript>();
         //CollectableScript.Spawns();
         collectable.Spawns();
 
