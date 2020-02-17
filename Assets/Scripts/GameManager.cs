@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,5 +29,10 @@ public class GameManager : MonoBehaviour
     {
         //collectable.spawn();
         scoreText.text = "Score: " + score;//update the score to display the players score
+    }
+
+    public static void gameFail()
+    {
+        SceneManager.LoadScene("Lose_Scene");
     }
 }
