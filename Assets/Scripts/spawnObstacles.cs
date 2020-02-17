@@ -17,7 +17,27 @@ public class spawnObstacles : MonoBehaviour
     private void spawnObstacle()
     {
         GameObject a = Instantiate(chocolateChunkPrefab) as GameObject;//creates the object
-        a.transform.position = new Vector2(objectBounds.x, Random.Range(-objectBounds.y, objectBounds.y));//spawn range, currently the screen
+        //a.transform.position = new Vector2(objectBounds.x, Random.Range(-objectBounds.y, objectBounds.y));//spawn range, currently the screen
+
+        //randomly choose 0,1 or 2
+        int rando = Random.Range(0, 2);
+        //Random rando = new Random();
+        // int ranNum = rando.Next(0,2);
+
+        //spawn based on the random number given
+        switch (rando)
+        {
+            case 0:
+                new Vector2(4.75f, -3.25f);
+                break;
+            case 1:
+                new Vector2(4.5f, -3.7f);
+                break;
+            case 2:
+                new Vector2(4.25f, -4.1f);
+                break;
+        }
+
     }
 
     IEnumerator obstacleWave()
