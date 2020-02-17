@@ -15,4 +15,17 @@ public class rollingPinDespawns : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            //input code triggering the lose screen
+        }
+
+        else if (collision.gameObject.CompareTag("Collectable")|| collision.gameObject.CompareTag("Hazard"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
