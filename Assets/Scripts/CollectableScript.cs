@@ -8,8 +8,6 @@ public class CollectableScript : MonoBehaviour
     //Translate movement
     private Vector2 collectablePosition;
     //public float speed;
-    
-
     public float speed = .01f;
     //private Rigidbody2D rb;
     private Vector2 objectBounds;
@@ -69,7 +67,7 @@ public class CollectableScript : MonoBehaviour
         }
     }*/
 
-    void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if ((col.gameObject.name == "Cookie") && (gameObject.name == "ChocoloateChip"))//if the player touches a chocolate chip
         {
