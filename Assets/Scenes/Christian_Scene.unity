@@ -185,7 +185,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &707859569
 GameObject:
@@ -293,7 +293,7 @@ Transform:
   m_LocalScale: {x: 0.408725, y: 0.408725, z: 0.408725}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &759728478
 GameObject:
@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 759728481}
   - component: {fileID: 759728480}
   - component: {fileID: 759728479}
+  - component: {fileID: 759728482}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -378,6 +379,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759728482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759728478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27c6890055054a42b29d63f0579cabc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chocolateChunkPrefab: {fileID: 3251692003435338473, guid: 9853909c2682a5640b6f7b3077581715,
+    type: 3}
+  respawnTime: 1
 --- !u!1 &1161449010
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,13 +503,27 @@ GameObject:
   m_Component:
   - component: {fileID: 1565383929}
   - component: {fileID: 1565383928}
+  - component: {fileID: 1565383927}
   m_Layer: 0
-  m_Name: Chocolate Chip
+  m_Name: ChocolateChip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1565383927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565383926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8d6f171232f354ab4792e8d8ebf9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.01
 --- !u!212 &1565383928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -554,7 +584,7 @@ Transform:
   m_GameObject: {fileID: 1565383926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.838, y: -3.292, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -609,6 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af86e644a6f5082488f5ae16a7e8e64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectable: {fileID: 0}
 --- !u!114 &1778735636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,5 +789,74 @@ Transform:
   m_LocalScale: {x: 0.374, y: 0.374, z: 0.374}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2636267854523529992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.292
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405975216677742700, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251692003435338473, guid: 9853909c2682a5640b6f7b3077581715,
+        type: 3}
+      propertyPath: m_Name
+      value: ChocolateChunk
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9853909c2682a5640b6f7b3077581715, type: 3}

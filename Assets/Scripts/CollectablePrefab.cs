@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectableScript : MonoBehaviour
+public class CollectablePrefab : MonoBehaviour
 {
-    
+
     //Translate movement
     private Vector2 collectablePosition;
-    //public float speed;
-    
-
-    public float speed = .01f;
+    public float speed = .0000000000000000001f;
     //private Rigidbody2D rb;
     private Vector2 objectBounds;
 
@@ -19,7 +16,8 @@ public class CollectableScript : MonoBehaviour
     {
         //rb = this.GetComponent<Rigidbody2D>();
         //rb.velocity = new Vector2(-speed, 0);
-       // objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
+        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
+        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
         //spawn in one of the 3 lanes
         //Spawns();
     }
@@ -27,13 +25,18 @@ public class CollectableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
+        if(transform.position.x < objectBounds.x)
+        {
+            Destroy(this.gameObject);//destroys the gameObject
+        }
+        */
         //calling the movement for the non player objects
         //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-        
+
         //Translate movement
         collectablePosition = new Vector2(transform.position.x - speed, transform.position.y);
         transform.position = collectablePosition;
-        
     }
 
     /*
@@ -46,15 +49,14 @@ public class CollectableScript : MonoBehaviour
     */
 
     /*spawn locations
-   public void Spawns()
+    public void Spawns()
     {
         //randomly choose 0,1 or 2
-        int rando = Random.Range(2, 0);
+        int rando = Random.Range(0, 2);
         //Random rando = new Random();
         // int ranNum = rando.Next(0,2);
 
         //spawn based on the random number given
-        //Debug.Log("Thing" + rando);
         switch (rando)
         {
             case 0:
