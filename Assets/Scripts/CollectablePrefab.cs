@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class CollectablePrefab : MonoBehaviour
 {
-    /*
-      Translate movement
-      private Vector2 collectablePosition;
-      public float speed;
-      */
 
-    public float speed = 10.0f;
-    private Rigidbody2D rb;
+    //Translate movement
+    private Vector2 collectablePosition;
+    public float speed = .0000000000000000001f;
+    //private Rigidbody2D rb;
     private Vector2 objectBounds;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-speed, 0);
+        //rb = this.GetComponent<Rigidbody2D>();
+        //rb.velocity = new Vector2(-speed, 0);
         //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
-        objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
+        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
         //spawn in one of the 3 lanes
         //Spawns();
     }
@@ -28,17 +25,18 @@ public class CollectablePrefab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(transform.position.x < objectBounds.x)
         {
             Destroy(this.gameObject);//destroys the gameObject
         }
+        */
         //calling the movement for the non player objects
         //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-        /*
-         * Translate movement
+
+        //Translate movement
         collectablePosition = new Vector2(transform.position.x - speed, transform.position.y);
         transform.position = collectablePosition;
-        */
     }
 
     /*
