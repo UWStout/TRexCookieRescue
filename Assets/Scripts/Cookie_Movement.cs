@@ -11,6 +11,8 @@ public class Cookie_Movement : MonoBehaviour
     }
 
     // Update is called once per frame
+    private Vector2 collectablePosition;
+    private Vector2 objectBounds;
 
     private Vector2 cookiePos;
     public float yPosChange = (1/2);
@@ -42,5 +44,22 @@ public class Cookie_Movement : MonoBehaviour
 
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if ((col.gameObject.tag == "DinoHazard") && (gameObject.tag == "Player"))//if the player touches a dino
+        {
+            collectablePosition = new Vector2(transform.position.x - 1f, transform.position.y);
+            transform.position = collectablePosition;
+            //knockback player by 
+        }
+
+        if ((col.gameObject.tag == "Milk") && (gameObject.tag == "Player"))//if the player touches milk
+        {
+            collectablePosition = new Vector2(transform.position.x - .5f, transform.position.y);
+            transform.position = collectablePosition;
+            //knockback player by 
+        }
     }
 }

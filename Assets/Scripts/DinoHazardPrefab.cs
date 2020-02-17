@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectablePrefab : MonoBehaviour
+public class DinoHazardPrefab : MonoBehaviour
 {
 
     //Translate movement
@@ -73,18 +73,15 @@ public class CollectablePrefab : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if ((col.gameObject.tag == "Player") && (gameObject.tag == "ChocoloateChip"))//if the player touches a chocolate chip
+        if ((col.gameObject.tag == "Player") && (gameObject.tag == "DinoHazard"))//if the player touches a dino
         {
-            //increase score by +1
-            GameManager.score += 1;
+            //knockback player by 
             Destroy(this.gameObject);//destroys the gameObject
         }
 
-        if ((col.gameObject.tag == "Player") && (gameObject.tag == "ChocoloateChunk"))//if the player touches a chocolate chunk
+        if ((col.gameObject.tag == "Player") && (gameObject.tag == "Milk"))//if the player touches milk
         {
-            Debug.Log("Destroy");
-            //increase score by +10
-            GameManager.score += 10;
+            //knockback player by 
             Destroy(this.gameObject);//destroys the gameObject
         }
     }
