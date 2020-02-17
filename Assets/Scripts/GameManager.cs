@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     {
        // CollectableScript collectable = other.GetComponent<CollectableScript>();
         //CollectableScript.Spawns();
-        collectable.Spawns();
+        //collectable.Spawns();
 
         score = 0;
         scoreText = GetComponent<Text>();//initialize the score to the text variable

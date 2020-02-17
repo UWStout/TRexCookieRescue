@@ -27,10 +27,6 @@ public class CollectableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      //  if(transform.position.x < screenbounds.x)
-        {
-            Destroy(this.gameObject);//destroys the gameObject
-        }
         //calling the movement for the non player objects
         //nonPlayerMovement(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         /*

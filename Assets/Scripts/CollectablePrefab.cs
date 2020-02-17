@@ -19,6 +19,7 @@ public class CollectablePrefab : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-speed, 0);
+        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
         objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
         //spawn in one of the 3 lanes
         //Spawns();
@@ -49,7 +50,7 @@ public class CollectablePrefab : MonoBehaviour
     }
     */
 
-    //spawn locations
+    /*spawn locations
     public void Spawns()
     {
         //randomly choose 0,1 or 2
@@ -70,7 +71,7 @@ public class CollectablePrefab : MonoBehaviour
                 new Vector2(4.25f, -4.1f);
                 break;
         }
-    }
+    }*/
 
     void OnCollisionEnter(Collision col)
     {
