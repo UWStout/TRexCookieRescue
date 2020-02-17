@@ -10,7 +10,7 @@ public class spawnObstacles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
+        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
         StartCoroutine(obstacleWave());
     }
 
@@ -25,6 +25,7 @@ public class spawnObstacles : MonoBehaviour
         // int ranNum = rando.Next(0,2);
 
         //spawn based on the random number given
+        Debug.Log("Thing" + rando);
         switch (rando)
         {
             case 0:
