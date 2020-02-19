@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5646559474431548342}
   - component: {fileID: 1707996223208664370}
   m_Layer: 0
-  m_Name: HazzardDino
+  m_Name: HazzardDinoPrefab
   m_TagString: DinoHazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
