@@ -19,6 +19,8 @@ public class Cookie_Movement : MonoBehaviour
     public float xPosChange = 1;
     public int laneTracker = 1;
 
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -44,7 +46,6 @@ public class Cookie_Movement : MonoBehaviour
             
 
         }
-
     }
 
     private void OnTriggerEnter2D(Collision2D col)
@@ -66,10 +67,14 @@ public class Cookie_Movement : MonoBehaviour
         */
         if (col.gameObject.tag == "Hazard")
         {
-            cookiePos = new Vector2(transform.position.x-xPosChange, transform.position.y);
+            cookiePos = new Vector2(transform.position.x - xPosChange, transform.position.y);
             transform.position = cookiePos;
+
+            Destroy(col.gameObject);
 
 
         }
     }
+
+
 }

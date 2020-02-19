@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [Collectable, Hazard, ChocolateChunk, Milk, DinoHazard]
+  tags:
+  - Collectable
+  - Hazard
+  - ChocolateChunk
+  - Milk
+  - DinoHazard
   layers:
   - Default
   - TransparentFX
@@ -43,6 +48,9 @@ TagManager:
     locked: 0
   - name: ENV_Background
     uniqueID: 3427478009
+    locked: 0
+  - name: Roll Off Parchment Paper
+    uniqueID: 2139107531
     locked: 0
   - name: ENV_Foreground
     uniqueID: 2740691217
