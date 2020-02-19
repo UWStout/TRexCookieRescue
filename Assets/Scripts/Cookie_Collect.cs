@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rollingPinDespawns : MonoBehaviour
+public class Cookie_Collect : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,14 +16,9 @@ public class rollingPinDespawns : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            GameManager.gameFail();
-        }
-
-        else if (collision.gameObject.CompareTag("Collectable"))
+        if (collision.gameObject.CompareTag("Collectable"))
         {
             Destroy(collision.gameObject);
         }

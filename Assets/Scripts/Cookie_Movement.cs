@@ -16,6 +16,7 @@ public class Cookie_Movement : MonoBehaviour
 
     private Vector2 cookiePos;
     public float yPosChange = (1/2);
+    public float xPosChange = 1;
     public int laneTracker = 1;
 
     void Update()
@@ -46,8 +47,9 @@ public class Cookie_Movement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collision2D col)
     {
+        /*
         if ((col.gameObject.tag == "DinoHazard") && (gameObject.tag == "Player"))//if the player touches a dino
         {
             collectablePosition = new Vector2(transform.position.x - 1f, transform.position.y);
@@ -60,6 +62,14 @@ public class Cookie_Movement : MonoBehaviour
             collectablePosition = new Vector2(transform.position.x - .5f, transform.position.y);
             transform.position = collectablePosition;
             //knockback player by 
+        }
+        */
+        if (col.gameObject.tag == "Hazard")
+        {
+            cookiePos = new Vector2(transform.position.x-xPosChange, transform.position.y);
+            transform.position = cookiePos;
+
+
         }
     }
 }
