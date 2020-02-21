@@ -47,10 +47,10 @@ public class Cookie_Movement : MonoBehaviour
 
         }
     }
-
+    /*
     private void OnTriggerEnter2D(Collision2D col)
     {
-        /*
+        
         if ((col.gameObject.tag == "DinoHazard") && (gameObject.tag == "Player"))//if the player touches a dino
         {
             collectablePosition = new Vector2(transform.position.x - 1f, transform.position.y);
@@ -64,7 +64,7 @@ public class Cookie_Movement : MonoBehaviour
             transform.position = collectablePosition;
             //knockback player by 
         }
-        */
+        
         if (col.gameObject.tag == "Hazard")
         {
             cookiePos = new Vector2(transform.position.x - xPosChange, transform.position.y);
@@ -75,6 +75,6 @@ public class Cookie_Movement : MonoBehaviour
 
         }
     }
-
+    */
 
 }

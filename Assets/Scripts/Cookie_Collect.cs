@@ -22,5 +22,10 @@ public class Cookie_Collect : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+
+        else if (collision.gameObject.CompareTag("Hazard"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
