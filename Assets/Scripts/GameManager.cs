@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // public CollectableScript collectable;
     public CollectableScript collectable;// = GameObject.Find("ChocolateChip");
     public static int score = 0;
+    public static int health = 3;
     private Text scoreText;
 
    // CollectableScript collectable = other.GetComponent<CollectableScript>();
