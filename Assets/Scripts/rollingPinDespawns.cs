@@ -16,16 +16,9 @@ public class rollingPinDespawns : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            GameManager.gameFail();
-        }
-
-        else if (collision.gameObject.CompareTag("Collectable"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+  void OnTriggerEnter2D(Collider2D col)
+  {
+    Debug.Log("KILL");
+    Destroy(col.gameObject);
+  }
 }

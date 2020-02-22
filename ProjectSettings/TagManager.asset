@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Collectable
-  - Hazard
-  - ChocolateChunk
-  - Milk
-  - DinoHazard
+  - ChocChip
+  - ChocChunk
+  - DinoToy
+  - MilkPuddle
   layers:
   - Default
   - TransparentFX
@@ -46,30 +45,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ENV_Background
+  - name: Background
     uniqueID: 3427478009
     locked: 0
-  - name: Roll Off Parchment Paper
-    uniqueID: 2139107531
-    locked: 0
-  - name: ENV_Foreground
+  - name: Foreground
     uniqueID: 2740691217
-    locked: 0
-  - name: Hazards
-    uniqueID: 3338072011
     locked: 0
   - name: Collectables
     uniqueID: 583326187
     locked: 0
+  - name: Hazards
+    uniqueID: 3338072011
+    locked: 0
   - name: Player
     uniqueID: 282233929
-    locked: 0
-  - name: Player
-    uniqueID: 2852469491
-    locked: 0
-  - name: Table
-    uniqueID: 591007437
-    locked: 0
-  - name: Obstacles
-    uniqueID: 955925935
     locked: 0

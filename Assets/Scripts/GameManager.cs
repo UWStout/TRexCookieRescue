@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // public CollectableScript collectable;
-    public CollectableScript collectable;// = GameObject.Find("ChocolateChip");
+    //public CollectableScript collectable;// = GameObject.Find("ChocolateChip");
     public static int score = 0;
     public static int health = 3;
-    private Text scoreText;
+    public GameObject[] hearts;
+    public Text scoreText;
 
    // CollectableScript collectable = other.GetComponent<CollectableScript>();
 
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
         //collectable.Spawns();
 
         score = 0;
-        scoreText = GetComponent<Text>();//initialize the score to the text variable
+        //scoreText = GetComponent<Text>();//initialize the score to the text variable
     }
 
     // Update is called once per frame
@@ -30,8 +31,18 @@ public class GameManager : MonoBehaviour
     {
         //collectable.spawn();
         scoreText.text = "Score: " + score;//update the score to display the players score
+      
     }
-
+    public void loseHeart()
+    {
+    Debug.Log("Ouch!");
+      health--;
+      Destroy(hearts[health]);
+      if (health == 0)
+      {
+        gameFail();
+      }
+    }
     public static void gameFail()
     {
         SceneManager.LoadScene("Lose_Scene");
