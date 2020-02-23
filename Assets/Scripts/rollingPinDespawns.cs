@@ -18,7 +18,14 @@ public class rollingPinDespawns : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D col)
   {
-    Debug.Log("KILL");
-    Destroy(col.gameObject);
+    // disables collider so that accidental collisions aren't made
+    col.GetComponent<BoxCollider2D>().enabled = false;
+    // pushes collected object to front sorting layer so it is visible
+    //SpriteRenderer ord = col.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+    //ord.sortingOrder = 3;
+    // sets velocity to 0 to prevent movement
+    //col.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    // sets bool so that animation plays
+    col.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("IsSquashed", true);
   }
 }

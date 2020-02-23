@@ -9,17 +9,17 @@ public class spawnObstacles : MonoBehaviour
     public GameObject[] prefab;//prefab array
     public float respawnTime = 1.0f;//time between spawns
     public float objectSpeed = 1.0f;//gotta go fast
+    private SpriteRenderer sprite;
     // public GameObject chocolateChunkPrefab;
     // private Vector2 objectBounds;
     // public static GameObject[] myObjects;//array of prefabs
     // Start is called before the first frame update
     void Start()
     {
-        //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
-        //myObjects = Resources.LoadAll<GameObject> ("Prefabs");//store all prefabs in the array
-
-        StartCoroutine(obstacleWave());
-  }
+      //objectBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));//defines the boundaries of the screen on an x and y axis
+      //myObjects = Resources.LoadAll<GameObject> ("Prefabs");//store all prefabs in the array
+      StartCoroutine(obstacleWave());
+    }
 
     private void spawnObstacle()
     {
@@ -29,7 +29,8 @@ public class spawnObstacles : MonoBehaviour
         GameObject obj = (GameObject)Instantiate(prefab[prefab_num], teleport[tele_num].position, teleport[tele_num].rotation); //clones prefab at position
         Rigidbody2D rb = obj.GetComponent<Rigidbody2D>(); //the rigidbody of prefab just cloned
         rb.velocity = new Vector2(-objectSpeed, 0); //begins moving it towards player at speed given
-        
+        sprite = obj.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        sprite.sortingOrder = tele_num;
 
     /*
     GameObject a = Instantiate(chocolateChunkPrefab) as GameObject;//creates the object
