@@ -36,16 +36,16 @@ public class GameManager : MonoBehaviour
     public void loseHeart()
     {
     Debug.Log("Ouch!");
-<<<<<<< HEAD
+
       health--;
       //Destroy(hearts[health]);
       hearts[health].transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("IsCollected", true);
       if (health == 0)
-=======
+
       health--; //when a player loses a heart, their health goes down
       Destroy(hearts[health]); //the sprite of the heart is removed
       if (health == 0) //when you hit 0 health
->>>>>>> bd396d62cf25b6e79e64d52ef5853eb4dec7c20b
+
       {
         gameFail();//you lose the game
       }
