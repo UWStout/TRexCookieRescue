@@ -526,7 +526,7 @@ SpriteRenderer:
   m_SortingLayerID: 282233929
   m_SortingLayer: 5
   m_SortingOrder: 999
-  m_Sprite: {fileID: 3286163911610860551, guid: cd8abdf11455f8046b485088887536fe,
+  m_Sprite: {fileID: 3286163911610860551, guid: 4058d1d5ac7eb254b898596cf83b5aa5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -690,6 +690,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!1 &511864882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2656920706831223982, guid: 1ad982d3360982841b6e028473f0fe76,
+    type: 3}
+  m_PrefabInstance: {fileID: 2656920706766449308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &511864883
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511864882}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de2f2af3cba4ef0428f25f85dd343638, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &610555696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,7 +1086,7 @@ SpriteRenderer:
   m_SortingLayerID: 282233929
   m_SortingLayer: 5
   m_SortingOrder: 999
-  m_Sprite: {fileID: 3286163911610860551, guid: cd8abdf11455f8046b485088887536fe,
+  m_Sprite: {fileID: 3286163911610860551, guid: 4058d1d5ac7eb254b898596cf83b5aa5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1489,7 +1514,7 @@ SpriteRenderer:
   m_SortingLayerID: 282233929
   m_SortingLayer: 5
   m_SortingOrder: 999
-  m_Sprite: {fileID: 3286163911610860551, guid: cd8abdf11455f8046b485088887536fe,
+  m_Sprite: {fileID: 3286163911610860551, guid: 4058d1d5ac7eb254b898596cf83b5aa5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1586,6 +1611,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646010473936501766, guid: 80873178634ae3143aca4e939e1d52d9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3286163911610860551, guid: 8a182dda98463dd43b2e411c806cc971,
+        type: 3}
     - target: {fileID: 4486957479035859371, guid: 80873178634ae3143aca4e939e1d52d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1665,6 +1696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: environment_table
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384833615276786710, guid: 80873178634ae3143aca4e939e1d52d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.061
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80873178634ae3143aca4e939e1d52d9, type: 3}
@@ -1774,6 +1810,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dino_Baker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383712601576733128, guid: 1ad982d3360982841b6e028473f0fe76,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 282233929
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383712601576733128, guid: 1ad982d3360982841b6e028473f0fe76,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad982d3360982841b6e028473f0fe76, type: 3}
