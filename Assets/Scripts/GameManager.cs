@@ -36,15 +36,15 @@ public class GameManager : MonoBehaviour
     public void loseHeart()
     {
     Debug.Log("Ouch!");
-      health--;
-      Destroy(hearts[health]);
-      if (health == 0)
+      health--; //when a player loses a heart, their health goes down
+      Destroy(hearts[health]); //the sprite of the heart is removed
+      if (health == 0) //when you hit 0 health
       {
-        gameFail();
+        gameFail();//you lose the game
       }
     }
     public static void gameFail()
     {
-        SceneManager.LoadScene("Lose_Scene");
+        SceneManager.LoadScene("Lose_Scene"); //gameFail() loads the lose scene
     }
 }
