@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
     {
     Debug.Log("Ouch!");
       health--;
-      Destroy(hearts[health]);
+      //Destroy(hearts[health]);
+      hearts[health].transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("IsCollected", true);
       if (health == 0)
       {
         gameFail();
