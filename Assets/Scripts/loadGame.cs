@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class loadGame : MonoBehaviour
 {
+    void Start()
+    {
+        GameManager.health = 3;
+    }
    
         public void loadMainScene()
         {
