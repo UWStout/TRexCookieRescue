@@ -27,20 +27,31 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        //Two if statements to move the player up or down
+
+        //move the player down
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if(laneTracker == 1 || laneTracker == 0)
+            //lane tracker is an int which tracks what lane you are currently in, you can only move down if you are in the top or middle lane (0 and 1)
+            if (laneTracker == 1 || laneTracker == 0)
             {
+                //change laneTracker to the proper lane 
                 laneTracker++;
+
                 // updates sorting layer based on lane
                 sprite.sortingOrder = laneTracker;
             } 
         }
+
+        //move player down 
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (laneTracker == 1 || laneTracker == 2)
+            // laneTracker makes sure that the player is in the bottom or middle lane (2 or 1)
+            if (laneTracker == 1 || laneTracker == 2) 
             {
+                //change laneTracker to the proper lane 
                 laneTracker--;
+
                 // updates sorting layer based on lane
                 sprite.sortingOrder = laneTracker;
               }
