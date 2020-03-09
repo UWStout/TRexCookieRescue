@@ -1,4 +1,4 @@
-# TRexCookie Rescue
+# T-Rex Cookie Rescue
 
 ## Description
 *T-Rex Cookie Rescue!* is a 2D endless runner that focuses on the enjoyment of collecting chocolate chips and chunks to earn points, all while running from a hungry T-Rex baker that is ready to eat you if you get too close!
